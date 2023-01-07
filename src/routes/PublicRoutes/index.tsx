@@ -18,7 +18,7 @@ const { Navigator, Screen } = createNativeStackNavigator<RootStackParamlist>();
 
 const PublicRoutes = () => {
   return (
-    <Navigator>
+    <Navigator initialRouteName="LandingPage">
       <Screen name="Login" component={Login} />
       <Screen name="Home" component={Home} />
       <Screen name="Cadastro" component={Cadastro} />
