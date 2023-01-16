@@ -1,30 +1,23 @@
+/* eslint-disable prettier/prettier */
+import Button from '@components/Button';
 import * as S from './styles';
-import { StatusBar } from 'expo-status-bar';
+import Inputs from '@components/Inputs';
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
 
-const Login: React.FC = ({ navigation }) => (
-  <S.Wrapper>
-    <StatusBar style="light" />
-    <S.Head>
-      <Text>imagem logo passarinho piupiuwer</Text>
-    </S.Head>
-    <S.Body>
-      <S.Inputs placeholder="e-mail" placeholderTextColor="#000000" />
-      <S.Inputs
-        placeholder="Password"
-        secureTextEntry={true}
-        placeholderTextColor="#000000"
-      />
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Home');
-        }}
-      >
-        <Text>Entrar</Text>
-      </TouchableOpacity>
-    </S.Body>
-  </S.Wrapper>
-);
+const Login = () => {
+  return (
 
+    <S.Wrapper>
+      <S.ImageContainer source={require('/src/assets/Logo.png')} />
+      <S.Container>
+        
+        <Inputs text={"Username"} />
+        <Inputs text={"Password"} />
+        <S.Texto>{"Forgot password?"}</S.Texto>
+        <Button name={'Entrar'} nav={'Home'}/>
+        <Button name={'Voltar'} nav={'LandingPage'} />
+      </S.Container>
+    </S.Wrapper>
+  );
+};
 export default Login;

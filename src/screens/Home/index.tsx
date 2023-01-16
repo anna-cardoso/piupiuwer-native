@@ -1,20 +1,14 @@
 import * as S from './styles';
-import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 
 /*falta adicionar o useState da seha e email*/
-const Home: React.FC = ({ navigation }) => {
+const Home = () => {
+  const navigation = useNavigation();
   return (
     <S.Wrapper>
-      <StatusBar style="light" />
-      <S.Heading>
-        <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
-          <Text> Perfil </Text>
-        </TouchableOpacity>
-        <Text>img-passarinho</Text>
-        <Text>trending</Text>
-      </S.Heading>
+      
     </S.Wrapper>
   );
 };
